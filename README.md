@@ -1,5 +1,3 @@
-Here is a clean, professional `README.md` file ready for GitHub. It covers installation, usage, and features without being overly complex.
-
 ```markdown
 # NetMHCpan Automation Engine
 
