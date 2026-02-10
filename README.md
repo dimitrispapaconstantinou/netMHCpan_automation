@@ -35,7 +35,7 @@ Your directory should look like this:
 
 1. **Setup:**
 * Clone this repository.
-* Ensure you have a `source` and a 'results' folder created in the root directory.
+* Ensure you have a `source` and a `results` folder created in the root directory.
 * Open `Run_Analysis.ipynb` and update the `BINARY_PATH` variable to point to your local `netMHCpan` executable.
 
 
