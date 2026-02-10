@@ -1,4 +1,3 @@
-```markdown
 # NetMHCpan Automation Engine
 
 An automated, fault-tolerant wrapper for `netMHCpan` designed for high-throughput peptide binding prediction. This engine manages parallel execution, dynamic file handling, and robust state management, making it easy to process thousands of samples efficiently.
@@ -24,8 +23,6 @@ Your directory should look like this:
 │   ├── CRC023_Unique_Peptides.csv
 │   └── CRC023_Alleles.csv
 └── results/               # [OUTPUT] Finished .xls files appear here
-
-```
 
 ## Prerequisites
 
