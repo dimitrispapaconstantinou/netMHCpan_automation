@@ -7,7 +7,6 @@ import json
 import multiprocessing
 from abc import ABC, abstractmethod
 from typing import List, Set
-# We use 'wait' and 'FIRST_COMPLETED' for smart polling
 from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
 
 
@@ -295,42 +294,3 @@ def run_worker_task(sample_id, input_dir, output_dir, binary_path):
         output_dir=output_dir,
         binary_path=binary_path)
     return runner.execute()
-
-#
-#
-# # Your specific path to the NetMHCpan tool
-# BINARY_PATH = "/home/dimitris/netMHCpan42/netMHCpan"
-#
-# # Define where your data lives and where results should go
-# INPUT_FOLDER = "source"
-# OUTPUT_FOLDER = "results"
-# LOG_FILE = "batch_run.log"
-# STATE_FILE = "processed_jobs.json" # <--- New configuration
-#
-# try:
-#     # 1. Setup Logging (prevents duplicate logs in Jupyter)
-#     setup_logging(LOG_FILE)
-#
-#     print("Initializing Batch Manager...")
-#
-#     # 1. Create the State Manager (The Memory)
-#     state_manager = JSONStateManager(state_file=STATE_FILE)
-#
-#     # 2. Initialize the Manager
-#     # We use the BatchManager class we just updated (which follows the IBatchManager interface)
-#
-#     # If you know your job is heavy, you can tune 'est_mem_per_job_gb' inside the class,
-#     # but the default (0.2) is usually fine.
-#     manager = BatchManager(
-#         state_manager=state_manager,  # <--- Injecting the dependency
-#         input_dir=INPUT_FOLDER,
-#         output_dir=OUTPUT_FOLDER,
-#         binary_path=BINARY_PATH
-#     )
-#
-#     # 3. Run the Batch
-#     # This will scan 'source', find all valid pairs, and process them one by one.
-#     manager.run_batch()
-#
-# except Exception as e:
-#     print(f"\n❌ CRITICAL ERROR: The batch run stopped unexpectedly.\nDetails: {e}")
