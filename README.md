@@ -23,6 +23,7 @@ Your directory should look like this:
 │   ├── CRC023_Unique_Peptides.csv
 │   └── CRC023_Alleles.csv
 └── results/               # [OUTPUT] Finished .xls files appear here
+```
 
 ## Prerequisites
 
@@ -62,6 +63,3 @@ Your directory should look like this:
 
 * **Memory Usage:** If you are running on a machine with very limited RAM, you can adjust the `est_mem_per_job_gb` parameter in the `Run_Analysis.ipynb` notebook (default is 1.5GB per worker).
 
-```
-
-```
