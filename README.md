@@ -1,5 +1,7 @@
 # NetMHCpan Automation Engine
 
+https://services.healthtech.dtu.dk/services/NetMHCpan-4.2/
+
 An automated, fault-tolerant wrapper for `netMHCpan` designed for high-throughput peptide binding prediction. This engine manages parallel execution, dynamic file handling, and robust state management, making it easy to process thousands of samples efficiently.
 
 ## Features
@@ -42,8 +44,19 @@ Your directory should look like this:
 2. **Add Data:**
 * Place your sample files in the `source` folder.
 * **Naming Convention:** Each sample needs a pair of files:
-* `{SampleID}_Unique_Peptides.csv`
-* `{SampleID}_Alleles.csv`
+* `{CommonPairName}_Unique_Peptides.csv` one peptide per line eg.
+```AAAFGGA
+AAAGA
+AAASL
+AADKF
+AAGPAL
+AAHGGLL
+AAKPPPG
+```
+
+* `{CommonPairName}_Alleles.csv`
+* The alleles file is a single comma-separated line, for example:
+HLA-A01:01,HLA-A02:01,HLA-A03:01
 
 
 
